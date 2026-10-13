@@ -13,10 +13,8 @@
     kitty
     lolcat
     mpv
-    neovim
     ntfs3g
     p7zip
-    ranger
     starship
     steam-run-free
     unzip
@@ -24,5 +22,10 @@
     wget
     wl-clipboard
     yazi
+
+    neovim
+    fd
+    ripgrep
+    luaPackages.tree-sitter-cli
   ];
 }
