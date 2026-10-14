@@ -20,7 +20,7 @@
     zen-browser.url = "github:0xc000022070/zen-browser-flake/beta";
 
     boot-assets = {
-      url = "git+ssh://git@github.com/foundingrain/private-boot-assets.git";
+      url = "git+ssh://git@github.com/n30sh/private-boot-assets.git";
       flake = false;
     };
   };
