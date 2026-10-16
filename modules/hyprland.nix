@@ -19,6 +19,16 @@
         pkgs.xdg-desktop-portal-gtk
       ];
       config.common.default = [ "hyprland" "gtk" ];
+      config = {
+        hyprland = {
+          default = [ "gtk" ];
+          "org.freedesktop.impl.portal.Screenshot" = [ "hyprland" ];
+          "org.freedesktop.impl.portal.ScreenCast" = [ "hyprland" ];
+        };
+        gnome = {
+          default = [ "gnome" ];
+        };
+      };
     };
 
     environment.systemPackages = with pkgs; [
