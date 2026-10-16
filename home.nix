@@ -9,8 +9,6 @@
 }:
 
 {
-  # home.username = "neo";
-  # home.homeDirectory = "/home/neo";
   home.username = hmUser;
   home.homeDirectory = "/home/${hmUser}";
   home.sessionVariables = {
