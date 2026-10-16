@@ -18,7 +18,6 @@
         pkgs.xdg-desktop-portal-hyprland
         pkgs.xdg-desktop-portal-gtk
       ];
-      config.common.default = [ "hyprland" "gtk" ];
       config = {
         hyprland = {
           default = [ "gtk" ];
@@ -29,6 +28,13 @@
           default = [ "gnome" ];
         };
       };
+    };
+
+    systemd.user.targets.hyprland-session = {
+      description = "Hyprland compositor session";
+      bindsTo = [ "graphical-session.target" ];
+      wants = [ "graphical-session-pre.target" ];
+      after = [ "graphical-session-pre.target" ];
     };
 
     environment.systemPackages = with pkgs; [
