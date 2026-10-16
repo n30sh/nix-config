@@ -151,8 +151,8 @@
 
     git = {
       enable = true;
-      settings.user.name = "foundingrain";
-      settings.user.email = "foundingrain@pm.me";
+      settings.user.name = "n30sh";
+      settings.user.email = "n30sh@pm.me";
     };
 
     kitty = {
