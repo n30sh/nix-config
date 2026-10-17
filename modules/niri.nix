@@ -21,6 +21,7 @@ in
   config = lib.mkIf config.neos.desktop.enable {
     environment.systemPackages = with pkgs; [
       alacritty
+      awww
       blueman
       brightnessctl
       cliphist
@@ -33,7 +34,6 @@ in
       nwg-look
       pavucontrol
       sunsetr
-      awww
       swaylock-effects
       swaylock-fancy
       swaynotificationcenter
