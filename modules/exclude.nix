@@ -3,9 +3,6 @@
 let
   disabledPackages = [
     #"krita"
-    "gqrx"
-    "sdrpp"
-    "goverlay"
   ];
 in
 {
