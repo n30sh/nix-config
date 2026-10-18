@@ -11,7 +11,9 @@
   environment.systemPackages = with pkgs; [
     nix-ld
     nix-output-monitor
-    nvd
+    nixd # Language server
+    nvd # Diff tool
+    nixfmt # Formatting nix files
   ];
 
   programs.nix-ld.enable = true;

@@ -21,6 +21,14 @@
     ts = "tailscale";
     mvpn = "mullvad";
   };
+  home.pointerCursor = {
+    enable = true;
+    gtk.enable = true;
+    x11.enable = true;
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Modern-Amber";
+    size = 30;
+  };
 
   gtk = lib.mkIf osConfig.neos.desktop.gnome.enable {
     enable = true;
