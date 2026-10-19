@@ -30,6 +30,11 @@
     size = 30;
   };
 
+  services.kdeconnect = {
+    enable = true;
+    indicator = true;
+  };
+
   gtk = lib.mkIf osConfig.neos.desktop.gnome.enable {
     enable = true;
     colorScheme = "dark";
