@@ -96,12 +96,10 @@
                 imports = [
                   ./home.nix
                   nix-index-database.homeModules.default
-                  zen-browser.homeModules.beta
                 ];
 
                 programs.command-not-found.enable = false;
                 programs.nix-index.enable = true;
-                programs.zen-browser.enable = true;
               };
             }
           ]

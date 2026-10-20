@@ -9,6 +9,10 @@
 }:
 
 {
+  imports = [
+    inputs.zen-browser.homeModules.beta
+  ];
+
   home.username = hmUser;
   home.homeDirectory = "/home/${hmUser}";
   home.sessionVariables = {
@@ -184,6 +188,19 @@
       enableBashIntegration = true;
       enableFishIntegration = true;
       # presets = "nerd-font-symbols";
+    };
+
+    zen-browser = {
+      enable = true;
+      profiles.default = {
+        id = 0;
+        name = "Default";
+        isDefault = true;
+        settings = {
+          "zen.window-sync-enabled" = false;
+          "zen.window-sync.prefer-unsynced-windows" = true;
+        };
+      };
     };
   };
 
