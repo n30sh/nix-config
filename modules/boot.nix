@@ -36,15 +36,12 @@ in
           };
         };
 
-        initrd.systemd.enable = true;
-
         plymouth = {
           enable = true;
           # theme = "breeze";
         };
 
         consoleLogLevel = 3;
-        initrd.verbose = false;
         kernelParams = [
           "quiet"
           "splash"
