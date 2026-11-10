@@ -14,14 +14,26 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/mapper/luks-4b6c8d53-9014-48d3-aa8b-69e7f1cecf63";
-      fsType = "ext4";
+    { device = "/dev/mapper/luks-834cb3df-fe84-4816-a12c-57f7d47450e4";
+      fsType = "btrfs";
     };
 
-  boot.initrd.luks.devices."luks-4b6c8d53-9014-48d3-aa8b-69e7f1cecf63".device = "/dev/disk/by-uuid/4b6c8d53-9014-48d3-aa8b-69e7f1cecf63";
+  boot.initrd.luks.devices."luks-834cb3df-fe84-4816-a12c-57f7d47450e4".device = "/dev/disk/by-uuid/834cb3df-fe84-4816-a12c-57f7d47450e4";
+
+  fileSystems."/home" =
+    { device = "/dev/mapper/luks-834cb3df-fe84-4816-a12c-57f7d47450e4";
+      fsType = "btrfs";
+      options = [ "subvol=home" ];
+    };
+
+  fileSystems."/nix" =
+    { device = "/dev/mapper/luks-834cb3df-fe84-4816-a12c-57f7d47450e4";
+      fsType = "btrfs";
+      options = [ "subvol=nix" ];
+    };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/1506-C4C1";
+    { device = "/dev/disk/by-uuid/D6E4-E766";
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
     };
