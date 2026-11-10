@@ -9,4 +9,5 @@
   ];
 
   hardware.rtl-sdr.enable = true;
+  users.users.neo.extraGroups = [ "plugdev" ];
 }
