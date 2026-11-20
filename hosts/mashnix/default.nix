@@ -13,8 +13,8 @@
 
   neos.desktop = {
     enable = true;
-    gnome.enable = false;
-    plasma.enable = true;
+    gnome.enable = true;
+    plasma.enable = false;
   };
 
   # Use latest kernel

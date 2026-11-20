@@ -25,4 +25,10 @@
       nss
     ];
   };
+
+  # For HD2 Arsenal
+  programs.appimage = {
+    enable = true;
+    binfmt = true;
+  };
 }
