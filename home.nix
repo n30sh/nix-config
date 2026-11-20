@@ -150,6 +150,9 @@
 
     bash = {
       enable = true;
+      interactiveShellInit = ''
+        set -o vi
+      '';
     };
 
     btop = {
@@ -161,6 +164,7 @@
       enable = true;
       interactiveShellInit = ''
         set fish_greeting # Disable greeting
+        fish_vi_key_bindings
       '';
     };
 
