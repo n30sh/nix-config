@@ -150,7 +150,7 @@
 
     bash = {
       enable = true;
-      interactiveShellInit = ''
+      initExtra = ''
         set -o vi
       '';
     };
